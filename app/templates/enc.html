@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Fixed navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="/index">ENCDEC</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/index">Home</a></li>
+					<li class="active"><a href="/enc">Encrypt</a></li>
+					<li><a href="/dec">Decrypt</a></li>
+					<li><a href="/getVars">Get Variables</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div>
+<div class="container theme-showcase" role="main">
+<div class="jumbotron">
+<div class="page-header">
+	<h1>Encrypt a message:</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<table class="table">
+				<tbody><!-- TABLE Body -->
+					<form action="." method="POST">
+					<tr>
+						<td>Text:</td>
+						<td><input type="text" name="text"></td>
+					</tr>
+					<tr>
+						<td>E:</td>
+						<td><input type="text" name="e"></td>
+					</tr>
+					<tr>
+						<td>M:</td>
+						<td><input type="text" name="m"></td>
+					</tr>
+					<tr>
+						<td><input class="btn btn-success" role="button" type="submit" name="encForm" value="Encrypt"></td>
+						<td></td>
+					</tr>
+					</form>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
